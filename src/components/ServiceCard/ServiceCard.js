@@ -6,17 +6,20 @@ import Image from "next/image";
 
 const ServiceCard = ({ service }) => {
   // service: Object. The arg given from a .map function
+
   return (
     <div className={styles.serviceCard}>
       <div className={styles.imgBorder}>
         <Image src={service.img} width={125} height={125} alt="blabla" />
       </div>
-      <h2>{service.name}</h2>
-      {service.price && (
-        <span className="greenTxt strong">{service.price} €</span>
-      )}
+      <div className={styles.priceAndName}>
+        <h2>{service.name}</h2>
+        {service.price && (
+          <span className="greenTxt strong">{service.price} €</span>
+        )}
+      </div>
       <p>{service.description}</p>
-      {service.other}
+      <div className={styles.options}>{service.other}</div>
     </div>
   );
 };

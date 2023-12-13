@@ -10,9 +10,11 @@
 
 .servicesContainer {
   margin-top: 90px;
+  padding: 30px;
   width: 100%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 100px;
+  column-gap: 100px;
+  row-gap: 50px;
 }

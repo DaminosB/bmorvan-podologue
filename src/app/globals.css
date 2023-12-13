@@ -7,7 +7,7 @@
 /* --------------------------------------------------------- */
 :root {
   --main-blue: navy;
-  --white-transparency: rgba(255, 255, 255, 0.333);
+  --white-transparency: rgba(255, 255, 255, 0.666);
 }
 
 /* --------------------------------------------------------- */
@@ -188,6 +188,11 @@ h1 {
   font-weight: 700;
   margin-bottom: 25px;
 }
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
 p {
   font-size: 18px;
   margin-top: 15px;
