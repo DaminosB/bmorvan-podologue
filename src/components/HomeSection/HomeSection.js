@@ -9,40 +9,29 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import pushRefInSectionsRefArray from "@/utils/pushRefInSectionsRefArray";
-import scrollMovement from "@/app/animations/scrollMovement";
 
-const Home = ({ sectionsRefArray, setActiveSection }) => {
-  const sectionName = "home";
-  const sectionRef = useRef(null);
+const Home = ({ setActiveSection, sectionName }) => {
+  // setActiveSection: Function. Is called when the component is in view to update the activeSection state
+  // sectionName: String. The name of the section
 
+  // The inView hook has a inView key which is a boolean that changes value from false to true when the ref appears on the user's screen
   const { ref, inView } = useInView({
     threshold: 0,
   });
 
-  // useEffect(
-  //   () => {
-  //     pushRefInSectionsRefArray(sectionsRefArray, sectionName, sectionRef);
-  //     // setTimeout(() => {
-  //     //   if (inView) {
-  //     //     // setActiveSection(sectionName);
-  //     //     scrollMovement(sectionRef.current);
-  //     //   }
-  //     // }, 500);
-  //     // console.log(sectionName, sectionRef.current.offsetTop);
-  //   },
-  //   [
-  //     // inView
-  //   ]
-  // );
+  useEffect(() => {
+    // Everytime the component is inView, the activeSection is updated
+    if (inView) {
+      setActiveSection(sectionName);
+    }
+  }, [inView, setActiveSection]);
 
   return (
-    // <section className={styles.homeSection} ref={sectionRef}>
     <div className={`container ${styles.homeSection}`} ref={ref}>
       <div className={styles.titleDiv}>
         <h1>
           Benjamin Morvan P&eacute;dicure-podologue dipl&ocirc;m&eacute;
-          d'&Eacute;tat &agrave; Quimper
+          d&apos;&Eacute;tat &agrave; Quimper
         </h1>
         <p>
           Ma passion pour les sports outdoors m’a amen&eacute; &agrave;
@@ -80,7 +69,6 @@ const Home = ({ sectionsRefArray, setActiveSection }) => {
         </span>
       </div>
     </div>
-    // </section>
   );
 };
 

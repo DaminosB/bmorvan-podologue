@@ -19,6 +19,8 @@
   display: flex;
   justify-content: flex-end;
   gap: 30px;
+  position: relative;
+  height: 100%;
 }
 
 .headerNav > button {
@@ -26,10 +28,21 @@
   justify-content: space-around;
   align-items: center;
   gap: 15px;
+  padding: 0 5px;
   cursor: pointer;
 }
 
 .headerNav > button > svg {
   height: 30px;
   min-width: 30px;
+}
+
+.slider {
+  transition: 500ms ease-in-out;
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: var(--main-blue);
 }

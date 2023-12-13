@@ -1,6 +1,6 @@
 import styles from "./ServicesAndRates.module.css";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 import { useInView } from "react-intersection-observer";
 
@@ -14,21 +14,21 @@ import plasteredFoot from "@/img/plastered-foot.png";
 import bicycleRider from "@/img/bicycle-rider.png";
 import skiBoot from "@/img/ski-boot.png";
 
-import pushRefInSectionsRefArray from "@/utils/pushRefInSectionsRefArray";
 import ServiceCard from "../ServiceCard/ServiceCard";
-import scrollMovement from "@/app/animations/scrollMovement";
 
-const ServicesAndRates = ({ sectionsRefArray, id, setActiveSection }) => {
-  const sectionName = `services ${id}`;
-  const sectionRef = useRef(null);
+const ServicesAndRates = ({ setActiveSection, sectionName }) => {
+  // setActiveSection: Function. Is called when the component is in view to update the activeSection state
+  // sectionName: String. The name of the section
 
+  // This array contains the content of the services provided by the client.
+  // It will be displayed through a .map function
   const servicesArray = [
     {
       name: "Bilan Podologique",
       description:
         "Une analyse biomécanique de votre appareil locomoteur et de votre posture.",
       img: orthopedics,
-      price: <span className="greenTxt strong">50 €</span>,
+      price: 50,
     },
     {
       name: "Orthèses plantaires",
@@ -38,7 +38,7 @@ const ServicesAndRates = ({ sectionsRefArray, id, setActiveSection }) => {
       other: (
         <>
           <span className="small">
-            Pointures à partir du 38&nbsp;:&nbsp;
+            Pointures &agrave; partir du 38&nbsp;:&nbsp;
             <span className="greenTxt strong">100&nbsp;€</span>
           </span>
           <span className="small">
@@ -46,7 +46,7 @@ const ServicesAndRates = ({ sectionsRefArray, id, setActiveSection }) => {
             <span className="greenTxt strong">80&nbsp;€</span>
           </span>
           <span className="small">
-            Pointures jusqu'au 27&nbsp;:&nbsp;
+            Pointures jusqu&apos;au 27&nbsp;:&nbsp;
             <span className="greenTxt strong">70&nbsp;€</span>
           </span>
         </>
@@ -56,71 +56,61 @@ const ServicesAndRates = ({ sectionsRefArray, id, setActiveSection }) => {
       name: "Bilan et Pose de K-taping",
       description: "Un bilan et une pose de K-taping.",
       img: footBandage,
-      price: <span className="greenTxt strong">50 €</span>,
+      price: 45,
     },
     {
       name: "Soin de pédicurie",
       description:
         "Un soin de pédicurie (coupe d’ongle, exérèse de l’hyperkératose et des cors…).",
       img: scissors,
-      price: <span className="greenTxt strong">50 €</span>,
+      price: 37,
     },
     {
       name: "Ongle incarné",
       description: "Le traitement de vos ongles incarnés.",
       img: nail,
-      price: <span className="greenTxt strong">50 €</span>,
+      price: 20,
     },
     {
       name: "Verrues plantaires",
       description: "Le traitement des verrues plantaires (forfait).",
       img: plantarWart,
-      price: <span className="greenTxt strong">50 €</span>,
+      price: 95,
     },
     {
       name: "Orthoplasties & orthonyxie",
       description: "Orthoplastie et prothèse / ongle thérapeutique.",
       img: plasteredFoot,
-      price: <span className="greenTxt strong">50 €</span>,
+      price: 30,
     },
     {
       name: "Bikefitting",
       description:
         "Une analyse posturale avec votre vélo en fonction de vos préférences naturelles/motrices.",
       img: bicycleRider,
-      price: <span className="greenTxt strong">50 €</span>,
+      price: 200,
     },
     {
       name: "Bootfitting",
       description: "Le moulage et l’adaptation de vos chaussons de ski.",
       img: skiBoot,
-      price: <span className="greenTxt strong">50 €</span>,
+      price: 150,
     },
   ];
 
+  // The inView hook has a inView key which is a boolean that changes value from false to true when the ref appears on the user's screen
   const { ref, inView } = useInView({
-    threshold: 0.2,
+    threshold: 0,
   });
 
-  //   useEffect(
-  //     () => {
-  //       pushRefInSectionsRefArray(sectionsRefArray, sectionName, sectionRef);
-
-  //       // setTimeout(() => {
-  //       //   if (inView) {
-  //       //     // setActiveSection(sectionName);
-  //       //     scrollMovement(sectionRef.current);
-  //       //   }
-  //       // }, 500);
-  //       // console.log(sectionName, sectionRef.current.offsetTop);
-  //     },
-  //     [
-  //       // inView
-  //     ]
-  //   );
+  useEffect(() => {
+    // Everytime the component is inView, the activeSection is updated
+    if (inView) {
+      setActiveSection(sectionName);
+    }
+  }, [inView, setActiveSection]);
 
   return (
-    // <section className={styles.servicesAndRatesSection} ref={sectionRef}>
     <div className="container" ref={ref}>
       <div className={styles.servicesContainer}>
         {servicesArray.map((service) => {
@@ -128,7 +118,6 @@ const ServicesAndRates = ({ sectionsRefArray, id, setActiveSection }) => {
         })}
       </div>
     </div>
-    // </section>
   );
 };
 
