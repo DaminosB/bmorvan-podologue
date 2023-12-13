@@ -22,13 +22,14 @@ const ContentWrapper = () => {
     <>
       <Header
         activeSection={activeSection}
+        setActiveSection={setActiveSection}
         fullpageApiState={fullpageApiState}
       />
       <ReactFullpage
         licenseKey={"gplv3-license"}
         scrollingSpeed={1000}
         credits={false}
-        anchors={["home", "practice", "services"]}
+        anchors={["home", "practice", "services", "appointment"]}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>

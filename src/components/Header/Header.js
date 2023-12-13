@@ -11,7 +11,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Header = ({ activeSection, fullpageApiState }) => {
+const Header = ({ activeSection, fullpageApiState, setActiveSection }) => {
   // activeSection: String. The name of the section that is currently being displayed on the user's screen
   // fullpageApiState: Object. The prop given to the ReactFullpageWrapper's children, transmitted through a state from the parent
 
@@ -58,40 +58,49 @@ const Header = ({ activeSection, fullpageApiState }) => {
   // This func moves the window from a section to another using the sectionName arg
   const moveToSection = (sectionName) => {
     fullpageApiState.moveTo(sectionName);
+    setTimeout(() => setActiveSection(sectionName), 250);
   };
+
+  // const activeSectionBackUp = useRef("home");
 
   // This useEffect calculate the slider's position
   useEffect(() => {
-    // We start by identifying the active index
-    const activeRefIndex = buttonRefsArray.findIndex(
-      (elem) => elem.name === activeSection
-    );
+    // activeSectionBackUp.current = activeSection;
 
-    // We store the active button's dimensions
-    const buttonWidth = buttonRefsArray[activeRefIndex].ref.current.scrollWidth;
-    const buttonHeight =
-      buttonRefsArray[activeRefIndex].ref.current.scrollHeight;
+    setTimeout(() => {
+      // We start by identifying the active index
+      const activeRefIndex = buttonRefsArray.findIndex(
+        (elem) => elem.name === activeSection
+      );
 
-    // We store the width and height of the button's parent (the nav tag)
-    const navWidth = navRef.current.scrollWidth;
-    const navHeight = navRef.current.scrollHeight;
+      // We store the active button's dimensions
+      const buttonWidth =
+        buttonRefsArray[activeRefIndex].ref.current.scrollWidth;
+      const buttonHeight =
+        buttonRefsArray[activeRefIndex].ref.current.scrollHeight;
 
-    // We now calculate the slider's position. It must be located under the button corresponding to the active section
-    const sliderTopPosition =
-      buttonRefsArray[activeRefIndex].ref.current.offsetTop;
+      // We store the width and height of the button's parent (the nav tag)
+      const navWidth = navRef.current.scrollWidth;
+      const navHeight = navRef.current.scrollHeight;
 
-    // bottomPosition is equal to the height of the parent - the button's topPosition + the button's height
-    const sliderBottomPosition = navHeight - (sliderTopPosition + buttonHeight);
+      // We now calculate the slider's position. It must be located under the button corresponding to the active section
+      const sliderTopPosition =
+        buttonRefsArray[activeRefIndex].ref.current.offsetTop;
 
-    const sliderLeftPosition =
-      buttonRefsArray[activeRefIndex].ref.current.offsetLeft;
+      // bottomPosition is equal to the height of the parent - the button's topPosition + the button's height
+      const sliderBottomPosition =
+        navHeight - (sliderTopPosition + buttonHeight);
 
-    // rightPosition is equal to the width of the parent - the button's leftPosition + the button's width
-    const sliderRightPosition = navWidth - (sliderLeftPosition + buttonWidth);
+      const sliderLeftPosition =
+        buttonRefsArray[activeRefIndex].ref.current.offsetLeft;
 
-    // We now apply the calculated position to the slider
-    sliderRef.current.style.left = `${sliderLeftPosition}px`;
-    sliderRef.current.style.right = `${sliderRightPosition}px`;
+      // rightPosition is equal to the width of the parent - the button's leftPosition + the button's width
+      const sliderRightPosition = navWidth - (sliderLeftPosition + buttonWidth);
+
+      // We now apply the calculated position to the slider
+      sliderRef.current.style.left = `${sliderLeftPosition}px`;
+      sliderRef.current.style.right = `${sliderRightPosition}px`;
+    }, 550);
   }, [activeSection]);
 
   return (

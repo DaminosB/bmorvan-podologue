@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 import HomeSection from "@/components/HomeSection/HomeSection";
 import ServicesAndRates from "@/components/ServicesAndRates/ServicesAndRates";
+import AppointmentSection from "../AppointmentSection/AppointmentSection";
 
 // This component displays the fullpage sections and sets fullpageApiState
 
@@ -30,13 +31,19 @@ const FullpageContent = ({
       <section className="section">
         <ServicesAndRates
           setActiveSection={setActiveSection}
-          sectionName="services"
+          sectionName="practice"
         />
       </section>
       <section className="section">
         <ServicesAndRates
           setActiveSection={setActiveSection}
           sectionName="services"
+        />
+      </section>
+      <section className="section">
+        <AppointmentSection
+          setActiveSection={setActiveSection}
+          sectionName="appointment"
         />
       </section>
     </main>

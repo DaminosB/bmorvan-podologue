@@ -100,7 +100,7 @@ const ServicesAndRates = ({ setActiveSection, sectionName }) => {
 
   // The inView hook has a inView key which is a boolean that changes value from false to true when the ref appears on the user's screen
   const { ref, inView } = useInView({
-    threshold: 0,
+    threshold: 0.1,
   });
 
   useEffect(() => {
