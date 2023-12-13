@@ -1,0 +1,18 @@
+.servicesAndRatesSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.servicesAndRatesSection > div {
+  width: 100%;
+}
+
+.servicesContainer {
+  margin-top: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 100px;
+}

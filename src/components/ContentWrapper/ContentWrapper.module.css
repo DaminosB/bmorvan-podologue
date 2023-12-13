@@ -1,0 +1,27 @@
+.main {
+  /* overflow-y: scroll;
+  height: 100vh;
+  scroll-snap-type: y mandatory; */
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.main > section {
+  width: 100%;
+  /* min-height: 100vh; */
+  /* scroll-snap-align: start;
+  scroll-behavior: smooth; */
+  /* margin-bottom: 50px; */
+  /* padding: 50px 0; */
+}
+
+.main > div:first-of-type {
+  background-image: url("../../img//home-banner.jpeg");
+  background-size: cover;
+}
+
+.main > div {
+  min-height: 100vh;
+  overflow-y: visible;
+}

@@ -1,0 +1,15 @@
+.serviceCard {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.imgBorder {
+  border-radius: 50%;
+  border: 12px navy solid;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

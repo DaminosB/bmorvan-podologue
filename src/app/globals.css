@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@200;400;700&display=swap");
+
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* ------------------------VARIABLES------------------------ */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+:root {
+  --main-blue: navy;
+  --white-transparency: rgba(255, 255, 255, 0.333);
+}
+
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 /* --------------------------RESET-------------------------- */
@@ -139,4 +151,64 @@ input,
 textarea {
   outline: none;
   border: none;
+}
+
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* -------------------------GLOBALS------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+
+.container {
+  margin: 0 auto;
+  max-width: 80%;
+  font-family: "Sarabun", sans-serif;
+}
+
+.strong {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.greenTxt {
+  color: green;
+}
+
+.small {
+  font-size: 14px;
+}
+
+body {
+  background-color: white;
+  color: var(--main-blue);
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+p {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+button {
+  background: none;
+}
+
+.fp-watermark {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
 }
