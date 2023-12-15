@@ -1,0 +1,46 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 90%;
+}
+
+.carousel img {
+  transition: 250ms ease-in-out;
+}
+
+.photoThumbnails {
+  display: flex;
+  gap: 5px;
+}
+
+.activePhoto {
+  position: relative;
+  background-color: navy;
+  transition: 200ms ease-in-out;
+}
+
+.activePhoto > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.opaqueImg {
+  opacity: 0.5;
+}
+
+.photoThumbnails > img {
+  width: calc((100% - 10px) / 3);
+  height: 100%;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.imageCaption {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  padding: 5px;
+  background-color: var(--white-transparency);
+}

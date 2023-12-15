@@ -4,10 +4,10 @@
   align-items: center;
   height: 100%;
   gap: 50px;
+  padding: 30px 0;
 }
 
 .titleDiv {
-  margin-top: 90px;
   background-color: var(--white-transparency);
   padding: 30px;
   flex: 1;
@@ -21,13 +21,29 @@
   gap: 20px;
 }
 
-.optionsDiv > span {
+.optionsDiv > * {
   width: fit-content;
   font-size: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  text-align: left;
   align-items: center;
   gap: 10px;
+}
+
+.optionsDiv > button.blueBtn {
+  background-color: var(--main-blue);
+  width: fit-content;
+  padding: 10px;
+  color: white;
+  border-radius: var(--standard-radius);
+  border: 3px var(--main-blue) solid;
+  transition: 250ms;
+}
+
+.optionsDiv > button.blueBtn:hover {
+  color: var(--main-blue);
+  background-color: white;
 }
 
 .optionsDiv svg {
@@ -35,8 +51,8 @@
   min-width: 30px;
 }
 
-@media (max-width: 1100px) {
-  .homeSection > div {
+@media (max-width: 1024px) {
+  .homeSection {
     flex-direction: column;
     gap: 20px;
   }
@@ -45,8 +61,25 @@
     flex-direction: row;
   }
 
-  .optionsDiv > span {
+  .optionsDiv > * {
+    justify-content: center;
+    text-align: center;
     font-size: 16px;
     width: calc((100% - 40px) / 3);
+  }
+}
+
+@media (max-width: 555px) {
+  .homeSection {
+    width: 100%;
+  }
+  .optionsDiv {
+    width: fit-content;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .optionsDiv > * {
+    text-align: left;
   }
 }

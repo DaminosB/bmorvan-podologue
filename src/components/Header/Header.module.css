@@ -1,11 +1,12 @@
 .header {
-  height: 75px;
   width: 100%;
+  position: relative;
   border-bottom: 2px var(--main-blue) solid;
   font-size: 20px;
   position: fixed;
   z-index: 1;
   background-color: var(--white-transparency);
+  /* background-color: yellow; */
 }
 
 .header > div {
@@ -28,8 +29,7 @@
   justify-content: space-around;
   align-items: center;
   gap: 15px;
-  padding: 0 5px;
-  cursor: pointer;
+  padding: 25px 5px;
 }
 
 .headerNav > button > svg {
@@ -43,6 +43,22 @@
   bottom: 10px;
   left: 0px;
   height: 5px;
-  border-radius: 5px;
+  border-radius: var(--standard-radius);
   background-color: var(--main-blue);
+}
+
+@media (max-width: 1024px) {
+  .headerNav > button {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .headerNav > button > svg {
+    height: 20;
+    min-width: 20;
+  }
+
+  .header span {
+    font-size: 16px;
+  }
 }

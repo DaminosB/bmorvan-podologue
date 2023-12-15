@@ -1,0 +1,68 @@
+.appointmentSection {
+  height: 100%;
+  display: flex;
+  gap: 50px;
+  width: 100%;
+}
+
+.appointmentSection > div {
+  flex: 1;
+}
+
+.appointmentSection > div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2px;
+  text-align: right;
+  font-size: 12px;
+}
+
+.appointmentSection > div:first-of-type > iframe {
+  border: 1px blue solid;
+  width: 100%;
+  height: 100%;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.contactDetails > div {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.contactDetails > iframe {
+  border: 1px blue solid;
+  width: 100%;
+  aspect-ratio: 4/3;
+}
+
+.appointmentSection svg {
+  margin-right: 10px;
+}
+
+.contactDetails > div > div {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1024px) {
+  .appointmentSection {
+    flex-direction: column;
+  }
+
+  .appointmentSection > div:first-of-type > iframe {
+    aspect-ratio: 4/3;
+  }
+}
+
+@media (max-width: 455px) {
+  .appointmentSection > div:first-of-type > iframe {
+    aspect-ratio: 9/16;
+  }
+}

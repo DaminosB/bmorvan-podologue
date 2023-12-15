@@ -4,15 +4,15 @@ import { useEffect } from "react";
 
 import { useInView } from "react-intersection-observer";
 
-import orthopedics from "@/img/orthopedics.png";
-import insoles from "@/img/insoles.png";
-import footBandage from "@/img/foot-bandage.png";
-import scissors from "@/img/scissors.png";
-import nail from "@/img/nail.png";
-import plantarWart from "@/img/plantar-wart.png";
-import plasteredFoot from "@/img/plastered-foot.png";
-import bicycleRider from "@/img/bicycle-rider.png";
-import skiBoot from "@/img/ski-boot.png";
+import orthopedics from "@/img/services-icons/orthopedics.png";
+import insoles from "@/img/services-icons/insoles.png";
+import footBandage from "@/img/services-icons/foot-bandage.png";
+import scissors from "@/img/services-icons/scissors.png";
+import nail from "@/img/services-icons/nail.png";
+import plantarWart from "@/img/services-icons/plantar-wart.png";
+import plasteredFoot from "@/img/services-icons/plastered-foot.png";
+import bicycleRider from "@/img/services-icons/bicycle-rider.png";
+import skiBoot from "@/img/services-icons/ski-boot.png";
 
 import ServiceCard from "../ServiceCard/ServiceCard";
 

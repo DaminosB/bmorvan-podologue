@@ -8,12 +8,13 @@
 }
 
 .main > section:first-of-type {
-  background-image: url("../../img//home-banner.jpeg");
+  background-image: url("../../img/generals/home-banner.jpeg");
   background-size: cover;
 }
 
 .main > section {
   min-height: 100vh;
+  box-sizing: content-box;
 }
 
 .main > section:nth-child(odd):not(:first-of-type) {
@@ -22,8 +23,4 @@
 
 .main > section:nth-child(odd):not(:first-of-type) > div > div {
   background-color: white;
-  /* background-color: var(--white-transparency); */
-}
-.main > section:nth-child(odd):not(:first-of-type) > div {
-  height: 100%;
 }

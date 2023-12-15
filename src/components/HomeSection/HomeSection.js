@@ -1,6 +1,6 @@
 import styles from "./HomeSection.module.css";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 import {
@@ -10,14 +10,20 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Home = ({ setActiveSection, sectionName }) => {
+const Home = ({ setActiveSection, sectionName, fullpageApi }) => {
   // setActiveSection: Function. Is called when the component is in view to update the activeSection state
   // sectionName: String. The name of the section
+  // fullpageApi: Object. The prop given by the ReactFullpageWrapper
 
   // The inView hook has a inView key which is a boolean that changes value from false to true when the ref appears on the user's screen
   const { ref, inView } = useInView({
     threshold: 0.1,
   });
+
+  const moveToSection = (sectionName) => {
+    fullpageApi.moveTo(sectionName);
+    setTimeout(() => setActiveSection(sectionName), 250);
+  };
 
   useEffect(() => {
     // Everytime the component is inView, the activeSection is updated
@@ -30,8 +36,8 @@ const Home = ({ setActiveSection, sectionName }) => {
     <div className={`container ${styles.homeSection}`} ref={ref}>
       <div className={styles.titleDiv}>
         <h1>
-          Benjamin Morvan P&eacute;dicure-podologue dipl&ocirc;m&eacute;
-          d&apos;&Eacute;tat &agrave; Quimper
+          Benjamin Morvan P&eacute;dicure-podologue
+          dipl&ocirc;m&eacute;&nbsp;d&apos;&Eacute;tat &agrave; Quimper
         </h1>
         <p>
           Ma passion pour les sports outdoors m’a amen&eacute; &agrave;
@@ -53,20 +59,24 @@ const Home = ({ setActiveSection, sectionName }) => {
         </p>
       </div>
       <div className={styles.optionsDiv}>
-        <span>
+        <div>
           <FontAwesomeIcon icon={faSquarePhone} />
-          02.57.23.06.34
-        </span>
-        <span>
+          <span>02.57.23.06.34</span>
+        </div>
+        <button
+          className={styles.blueBtn}
+          onClick={() => moveToSection("appointment")}
+        >
           <FontAwesomeIcon icon={faCalendarPlus} />
           Prendre rendez-&#xFEFF;vous
-        </span>
-        <span>
+        </button>
+        <button onClick={() => moveToSection("contact")}>
           <FontAwesomeIcon icon={faLocationDot} />
-          Maison&nbsp;m&eacute;dicale de&nbsp;Kerlic
-          <br />
-          9&nbsp;chemin&nbsp;de&nbsp;Penhoat 29000&nbsp;Quimper
-        </span>
+          <span>
+            Maison&nbsp;m&eacute;dicale de&nbsp;Kerlic
+            9&nbsp;chemin&nbsp;de&nbsp;Penhoat 29000&nbsp;Quimper
+          </span>
+        </button>
       </div>
     </div>
   );
