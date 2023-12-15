@@ -1,6 +1,7 @@
 .medicalCenterSection {
   padding: 30px;
   height: 100%;
+  background-color: white;
 }
 
 .medicalCenterSection > div {
