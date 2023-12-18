@@ -7,6 +7,7 @@
 /* --------------------------------------------------------- */
 :root {
   --main-blue: navy;
+  --light-blue: lightblue;
   --white-transparency: rgba(255, 255, 255, 0.666);
   --standard-radius: 5px;
 }

@@ -16,7 +16,7 @@ import skiBoot from "@/img/services-icons/ski-boot.png";
 
 import ServiceCard from "../ServiceCard/ServiceCard";
 
-const ServicesAndRates = ({ setActiveSection, sectionName }) => {
+const ServicesAndRates = ({ setActiveSection, sectionName, fullpageApi }) => {
   // setActiveSection: Function. Is called when the component is in view to update the activeSection state
   // sectionName: String. The name of the section
 
@@ -105,7 +105,7 @@ const ServicesAndRates = ({ setActiveSection, sectionName }) => {
 
   useEffect(() => {
     // Everytime the component is inView, the activeSection is updated
-    if (inView) {
+    if (inView && fullpageApi.getActiveSection().anchor === sectionName) {
       setActiveSection(sectionName);
     }
   }, [inView, setActiveSection]);

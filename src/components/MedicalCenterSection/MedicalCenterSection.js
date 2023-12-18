@@ -34,7 +34,7 @@ const MedicalCenterSection = ({
 
   useEffect(() => {
     // Everytime the component is inView, the activeSection is updated
-    if (inView) {
+    if (inView && fullpageApi.getActiveSection().anchor === sectionName) {
       setActiveSection(sectionName);
     }
   }, [inView, setActiveSection]);

@@ -7,6 +7,7 @@ import ServicesAndRates from "@/components/ServicesAndRates/ServicesAndRates";
 import AppointmentSection from "@/components/AppointmentSection/AppointmentSection";
 import MedicalCenterSection from "@/components/MedicalCenterSection/MedicalCenterSection";
 import Spacer from "@/components/Spacer/Spacer";
+import ContactSection from "../ContactSection/ContactSection";
 
 // This component displays the fullpage sections and sets fullpageApiState
 
@@ -43,6 +44,7 @@ const FullpageContent = ({
         <ServicesAndRates
           setActiveSection={setActiveSection}
           sectionName="services"
+          fullpageApi={fullpageApi}
         />
         <Spacer height={headerHeight / 2} />
       </section>
@@ -60,15 +62,16 @@ const FullpageContent = ({
         <AppointmentSection
           setActiveSection={setActiveSection}
           sectionName="appointment"
+          fullpageApi={fullpageApi}
         />
         <Spacer height={headerHeight / 2} />
       </section>
       <section className="section">
         <Spacer height={headerHeight} />
-        <AppointmentSection
+        <ContactSection
           setActiveSection={setActiveSection}
           sectionName="contact"
-          disable={true}
+          fullpageApi={fullpageApi}
         />
         <Spacer height={headerHeight / 2} />
       </section>

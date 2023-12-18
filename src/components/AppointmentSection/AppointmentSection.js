@@ -11,7 +11,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const AppointmentSection = ({ setActiveSection, sectionName, disable }) => {
+const AppointmentSection = ({ setActiveSection, sectionName, fullpageApi }) => {
   // The inView hook has a inView key which is a boolean that changes value from false to true when the ref appears on the user's screen
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -19,7 +19,7 @@ const AppointmentSection = ({ setActiveSection, sectionName, disable }) => {
 
   useEffect(() => {
     // Everytime the component is inView, the activeSection is updated
-    if (inView) {
+    if (inView && fullpageApi.getActiveSection().anchor === sectionName) {
       setActiveSection(sectionName);
     }
   }, [inView, setActiveSection]);
@@ -37,11 +37,7 @@ const AppointmentSection = ({ setActiveSection, sectionName, disable }) => {
         <iframe
           title="Réservation Doctolib"
           loading="lazy"
-          //   src={
-          //     !disable
-          //       ? "https:/partners.doctolib.fr/pedicure-podologue/landivisiau/benjamin-morvan"
-          //       : ""
-          //   }
+          //   src="https:/partners.doctolib.fr/pedicure-podologue/landivisiau/benjamin-morvan"
           allowFullScreen
         ></iframe>
       </div>

@@ -20,7 +20,3 @@
 .main > section:nth-child(odd):not(:first-of-type) {
   background-color: navy;
 }
-
-.main > section:nth-child(odd):not(:first-of-type) > div > div {
-  background-color: white;
-}
