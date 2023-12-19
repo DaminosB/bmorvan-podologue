@@ -1,9 +1,5 @@
 import styles from "./AppointmentSection.module.css";
 
-import { useEffect } from "react";
-
-import { useInView } from "react-intersection-observer";
-
 import {
   faSquarePhone,
   faArrowUpRightFromSquare,
@@ -11,21 +7,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const AppointmentSection = ({ setActiveSection, sectionName, fullpageApi }) => {
-  // The inView hook has a inView key which is a boolean that changes value from false to true when the ref appears on the user's screen
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-  });
-
-  useEffect(() => {
-    // Everytime the component is inView, the activeSection is updated
-    if (inView && fullpageApi.getActiveSection().anchor === sectionName) {
-      setActiveSection(sectionName);
-    }
-  }, [inView, setActiveSection]);
-
+const AppointmentSection = () => {
   return (
-    <div className={`container ${styles.appointmentSection}`} ref={ref}>
+    <div className={`container ${styles.appointmentSection}`}>
       <div>
         <a
           href="https://www.doctolib.fr/pedicure-podologue/landivisiau/benjamin-morvan"

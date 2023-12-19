@@ -1,10 +1,5 @@
 import styles from "./MedicalCenterSection.module.css";
 
-import { useEffect } from "react";
-
-import { useInView } from "react-intersection-observer";
-import Carousel from "@/components/Carousel/Carousel";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
 
@@ -12,13 +7,9 @@ import photo1 from "@/img/medical-center/1.jpeg";
 import photo2 from "@/img/medical-center/2.jpeg";
 import photo3 from "@/img/medical-center/3.jpeg";
 
-const MedicalCenterSection = ({
-  setActiveSection,
-  sectionName,
-  fullpageApi,
-}) => {
-  // setActiveSection: Function. Is called when the component is in view to update the activeSection state
-  // sectionName: String. The name of the section
+import Carousel from "@/components/Carousel/Carousel";
+
+const MedicalCenterSection = ({ fullpageApi }) => {
   // fullpageApi: Object. The prop given by the ReactFullpageWrapper
 
   const fileArray = [
@@ -27,20 +18,8 @@ const MedicalCenterSection = ({
     { photo: photo3, caption: "crédit photo : Ouest France" },
   ];
 
-  // The inView hook has a inView key which is a boolean that changes value from false to true when the ref appears on the user's screen
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-  });
-
-  useEffect(() => {
-    // Everytime the component is inView, the activeSection is updated
-    if (inView && fullpageApi.getActiveSection().anchor === sectionName) {
-      setActiveSection(sectionName);
-    }
-  }, [inView, setActiveSection]);
-
   return (
-    <div className={`container ${styles.medicalCenterSection}`} ref={ref}>
+    <div className={`container ${styles.medicalCenterSection}`}>
       <h2>La Maison m&eacute;dicale du Kerlic</h2>
       <div>
         <Carousel fileArray={fileArray} />

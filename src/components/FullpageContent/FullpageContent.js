@@ -6,8 +6,8 @@ import HomeSection from "@/components/HomeSection/HomeSection";
 import ServicesAndRates from "@/components/ServicesAndRates/ServicesAndRates";
 import AppointmentSection from "@/components/AppointmentSection/AppointmentSection";
 import MedicalCenterSection from "@/components/MedicalCenterSection/MedicalCenterSection";
-import Spacer from "@/components/Spacer/Spacer";
-import ContactSection from "../ContactSection/ContactSection";
+import ContactSection from "@/components/ContactSection/ContactSection";
+import SectionLayout from "@/components/SectionLayout/SectionLayout";
 
 // This component displays the fullpage sections and sets fullpageApiState
 
@@ -30,51 +30,42 @@ const FullpageContent = ({
 
   return (
     <main className={styles.main}>
-      <section className="section">
-        <Spacer height={headerHeight} />
-        <HomeSection
-          setActiveSection={setActiveSection}
-          sectionName="home"
-          fullpageApi={fullpageApi}
-        />
-        <Spacer height={headerHeight / 2} />
-      </section>
-      <section className="section">
-        <Spacer height={headerHeight} />
-        <ServicesAndRates
-          setActiveSection={setActiveSection}
-          sectionName="services"
-          fullpageApi={fullpageApi}
-        />
-        <Spacer height={headerHeight / 2} />
-      </section>
-      <section className="section">
-        <Spacer height={headerHeight} />
-        <MedicalCenterSection
-          setActiveSection={setActiveSection}
-          sectionName="practice"
-          fullpageApi={fullpageApi}
-        />
-        <Spacer height={headerHeight / 2} />
-      </section>
-      <section className="section">
-        <Spacer height={headerHeight} />
-        <AppointmentSection
-          setActiveSection={setActiveSection}
-          sectionName="appointment"
-          fullpageApi={fullpageApi}
-        />
-        <Spacer height={headerHeight / 2} />
-      </section>
-      <section className="section">
-        <Spacer height={headerHeight} />
-        <ContactSection
-          setActiveSection={setActiveSection}
-          sectionName="contact"
-          fullpageApi={fullpageApi}
-        />
-        <Spacer height={headerHeight / 2} />
-      </section>
+      <SectionLayout
+        headerHeight={headerHeight}
+        setActiveSection={setActiveSection}
+        sectionName={"home"}
+        fullpageApi={fullpageApi}
+      >
+        <HomeSection fullpageApi={fullpageApi} />
+      </SectionLayout>
+      <SectionLayout
+        setActiveSection={setActiveSection}
+        sectionName="services"
+        fullpageApi={fullpageApi}
+      >
+        <ServicesAndRates />
+      </SectionLayout>
+      <SectionLayout
+        setActiveSection={setActiveSection}
+        sectionName="practice"
+        fullpageApi={fullpageApi}
+      >
+        <MedicalCenterSection fullpageApi={fullpageApi} />
+      </SectionLayout>
+      <SectionLayout
+        setActiveSection={setActiveSection}
+        sectionName="appointment"
+        fullpageApi={fullpageApi}
+      >
+        <AppointmentSection />
+      </SectionLayout>
+      <SectionLayout
+        setActiveSection={setActiveSection}
+        sectionName="contact"
+        fullpageApi={fullpageApi}
+      >
+        <ContactSection />
+      </SectionLayout>
     </main>
   );
 };

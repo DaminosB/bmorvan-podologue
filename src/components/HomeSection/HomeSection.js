@@ -1,8 +1,5 @@
 import styles from "./HomeSection.module.css";
 
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-
 import {
   faSquarePhone,
   faCalendarPlus,
@@ -10,30 +7,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Home = ({ setActiveSection, sectionName, fullpageApi }) => {
-  // setActiveSection: Function. Is called when the component is in view to update the activeSection state
-  // sectionName: String. The name of the section
+const Home = ({ fullpageApi }) => {
   // fullpageApi: Object. The prop given by the ReactFullpageWrapper
-
-  // The inView hook has a inView key which is a boolean that changes value from false to true when the ref appears on the user's screen
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-  });
 
   const moveToSection = (sectionName) => {
     fullpageApi.moveTo(sectionName);
-    setTimeout(() => setActiveSection(sectionName), 250);
   };
 
-  useEffect(() => {
-    // Everytime the component is inView, the activeSection is updated
-    if (inView && fullpageApi.getActiveSection().anchor === sectionName) {
-      setActiveSection(sectionName);
-    }
-  }, [inView, setActiveSection]);
-
   return (
-    <div className={`container ${styles.homeSection}`} ref={ref}>
+    <div className={`container ${styles.homeSection}`}>
       <div className={styles.titleDiv}>
         <h1>
           Benjamin Morvan P&eacute;dicure-podologue
