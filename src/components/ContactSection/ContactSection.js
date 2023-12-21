@@ -86,7 +86,7 @@ const ContactSection = () => {
         telephone.isValid ||
         message.isValid
       ) {
-        const { data } = await axios.post("http://localhost:3000/api/", {
+        const { data } = await axios.post("/api/", {
           name: name.value,
           email: email.value,
           telephone: telephone.value,
