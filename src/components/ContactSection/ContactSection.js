@@ -263,11 +263,14 @@ const ContactSection = () => {
         </form>
 
         <div className={styles.contactInfos}>
-          <Image src={profilePicture} />
+          <Image
+            src={profilePicture}
+            alt="Photo de Benjamin Morvan issue de sa page Doctolib"
+          />
           <div>
             <h3>Benjamin Morvan</h3>
             <p>
-              P&eacute;dicure-podologue dipl&ocirc;m&eacute; d'&Eacute;tat
+              P&eacute;dicure-podologue dipl&ocirc;m&eacute; d&apos;&Eacute;tat
               &agrave; Quimper
             </p>
           </div>

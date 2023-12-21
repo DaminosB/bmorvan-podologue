@@ -141,7 +141,7 @@ const Header = ({
 
     // This listener will call the navShadowsSettings func on scroll to set the shadows on the navContainer
     navRef.current.addEventListener("scroll", navShadowsSettings);
-  }, [activeSection]);
+  }, [activeSection, setHeaderHeight]);
 
   return (
     <header className={styles.header} ref={headerRef}>

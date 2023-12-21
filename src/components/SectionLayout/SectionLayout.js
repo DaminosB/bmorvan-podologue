@@ -28,7 +28,7 @@ const SectionLayout = ({
     if (inView && fullpageApi.getActiveSection().anchor === sectionName) {
       setActiveSection(sectionName);
     }
-  }, [inView, setActiveSection]);
+  }, [inView, setActiveSection, fullpageApi, sectionName]);
   return (
     <section
       className="section"

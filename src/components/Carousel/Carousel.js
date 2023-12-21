@@ -35,7 +35,11 @@ const Carousel = ({ fileArray }) => {
   return (
     <div className={styles.carousel}>
       <div className={styles.activePhoto}>
-        <Image src={fileArray[activeIndex].photo} ref={activePhotoRef} />
+        <Image
+          src={fileArray[activeIndex].photo}
+          ref={activePhotoRef}
+          alt={"Photo de la Maison Médical du Kerlic, crédit Ouest France"}
+        />
         <span className={styles.imageCaption}>
           {fileArray[activeIndex].caption}
         </span>
@@ -46,6 +50,7 @@ const Carousel = ({ fileArray }) => {
             <Image
               key={i}
               src={photo.photo}
+              alt={"Photo de la Maison Médical du Kerlic, crédit Ouest France"}
               className={activeIndex === i ? styles.opaqueImg : ""}
               onClick={() => changeActiveImage(i)}
             />
