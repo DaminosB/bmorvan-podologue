@@ -15,13 +15,13 @@ const AppointmentSection = () => {
           href="https://www.doctolib.fr/pedicure-podologue/landivisiau/benjamin-morvan"
           target="blank"
         >
-          Si la page ne s'affiche pas correctement, cliquez ici&nbsp;
+          Si la page ne s&apos;affiche pas correctement, cliquez ici&nbsp;
           <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
         </a>
         <iframe
           title="Réservation Doctolib"
           loading="lazy"
-          //   src="https:/partners.doctolib.fr/pedicure-podologue/landivisiau/benjamin-morvan"
+          src="https:/partners.doctolib.fr/pedicure-podologue/landivisiau/benjamin-morvan"
           allowFullScreen
         ></iframe>
       </div>

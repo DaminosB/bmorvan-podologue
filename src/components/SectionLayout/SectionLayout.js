@@ -10,6 +10,7 @@ const SectionLayout = ({
   setActiveSection,
   sectionName,
   fullpageApi,
+  backgroundImage,
   children,
 }) => {
   // headerHeight: Number. The height of the header. We put a spacer of the same height to avoid any overlaps
@@ -28,9 +29,12 @@ const SectionLayout = ({
       setActiveSection(sectionName);
     }
   }, [inView, setActiveSection]);
-
   return (
-    <section className="section" ref={ref}>
+    <section
+      className="section"
+      ref={ref}
+      style={{ backgroundImage: `url(${backgroundImage.src}` }}
+    >
       <Spacer height={headerHeight} />
       {children}
       <Spacer height={headerHeight / 2} />

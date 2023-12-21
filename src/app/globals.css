@@ -176,6 +176,10 @@ textarea {
   color: green;
 }
 
+.redTxt {
+  color: red;
+}
+
 .small {
   font-size: 14px;
 }
@@ -192,14 +196,19 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
   margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 20px;
 }
 
 a:hover {

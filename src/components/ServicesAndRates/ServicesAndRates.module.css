@@ -1,14 +1,5 @@
-.servicesAndRatesSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.servicesAndRatesSection > div {
-  width: 100%;
-}
-
 .servicesContainer {
+  background-color: var(--white-transparency);
   padding: 30px;
   width: 100%;
   display: flex;

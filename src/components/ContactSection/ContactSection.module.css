@@ -1,30 +1,142 @@
-.contactSection {
+.contactContainer {
+  background-color: var(--white-transparency);
+  padding: 30px;
+}
+
+.contactContainer h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contactContainer > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.contactForm {
+  padding: 30px 15px;
+  flex: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
 
-.contactSection > * {
-  width: 25%;
-  height: 25px;
+.contactForm > label {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.contactSection h2 {
-  background-color: white;
+.contactForm input,
+.contactForm textarea,
+.contactForm button {
   border-radius: var(--standard-radius);
-  text-align: center;
-}
-
-.contactSection input {
-  background-color: white;
-  color: var(--main-blue);
-  border-radius: var(--standard-radius);
-  width: 100%;
   height: 100%;
   font-size: 16px;
+  font-family: "Sarabun", sans-serif;
+  padding: 5px;
+  transition: 500ms ease-in-out;
 }
 
-.contactSection input::placeholder {
-  color: var(--light-blue);
+.contactForm input,
+.contactForm textarea {
+  background-color: var(--white-transparency);
+  border-bottom: 2px var(--main-blue) solid;
+  margin-top: 5px;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  background-color: var(--light-blue);
+}
+
+.contactForm input {
+  width: 50%;
+}
+
+.contactForm .redInput {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.contactForm textarea {
+  width: 100%;
+  aspect-ratio: 3;
+}
+
+.contactForm button {
+  border: 2px var(--main-blue) solid;
+  background-color: var(--main-blue);
+  color: white;
+  transition: 500ms ease-in-out;
+}
+
+.contactForm button:hover {
+  background-color: white;
+  color: var(--main-blue);
+}
+
+.contactForm button.disabled {
+  background-color: var(--light-blue);
+  color: white;
+  cursor: not-allowed;
+}
+
+.contactForm p {
+  margin-top: 0;
+  height: 18px;
+}
+
+.contactForm > div:last-of-type {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.contactInfos {
+  border-radius: var(--standard-radius);
+  padding: 15px;
+  flex: 1;
+  background-color: var(--light-blue);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contactInfos > div:not(:first-of-type) {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contactInfos img {
+  width: 100%;
+  height: 100%;
+}
+
+.contactInfos svg {
+  font-size: 30px;
+}
+
+@media (max-width: 1024px) {
+  .contactContainer > div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contactForm {
+    width: 100%;
+  }
+
+  .contactForm label {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .contactForm input {
+    width: 100%;
+  }
 }

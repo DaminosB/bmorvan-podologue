@@ -79,7 +79,7 @@ const ServicesAndRates = () => {
     {
       name: "Bikefitting",
       description:
-        "Une analyse posturale avec votre vélo en fonction de vos préférences naturelles/motrices.",
+        "Une analyse posturale avec votre vélo en fonction de vos préférences naturelles et motrices.",
       img: bicycleRider,
       price: 200,
     },
@@ -92,12 +92,10 @@ const ServicesAndRates = () => {
   ];
 
   return (
-    <div className="container">
-      <div className={styles.servicesContainer}>
-        {servicesArray.map((service) => {
-          return <ServiceCard key={service.name} service={service} />;
-        })}
-      </div>
+    <div className={`container ${styles.servicesContainer}`}>
+      {servicesArray.map((service) => {
+        return <ServiceCard key={service.name} service={service} />;
+      })}
     </div>
   );
 };

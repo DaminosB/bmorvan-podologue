@@ -29,8 +29,8 @@ const MedicalCenterSection = ({ fullpageApi }) => {
             <p>
               La Maison m&eacute;dicale du Kerlic se trouve au c&oelig;ur du
               P&ocirc;le de sant&eacute; du Kerlic. Ce p&ocirc;le comprend
-              &eacute;galement une clinique mutualiste et un centre d'imagerie
-              m&eacute;dicale.
+              &eacute;galement une clinique mutualiste et un centre
+              d&apos;imagerie m&eacute;dicale.
             </p>
           </div>
           <div>

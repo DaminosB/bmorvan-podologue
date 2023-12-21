@@ -52,13 +52,13 @@ const Home = ({ fullpageApi }) => {
           <FontAwesomeIcon icon={faCalendarPlus} />
           Prendre rendez-&#xFEFF;vous
         </button>
-        <button onClick={() => moveToSection("contact")}>
+        <div>
           <FontAwesomeIcon icon={faLocationDot} />
           <span>
             Maison&nbsp;m&eacute;dicale de&nbsp;Kerlic
             9&nbsp;chemin&nbsp;de&nbsp;Penhoat 29000&nbsp;Quimper
           </span>
-        </button>
+        </div>
       </div>
     </div>
   );

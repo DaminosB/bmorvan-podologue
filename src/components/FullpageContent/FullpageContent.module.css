@@ -7,16 +7,11 @@
   width: 100%;
 }
 
-.main > section:first-of-type {
-  background-image: url("../../img/generals/home-banner.jpeg");
+.main > section {
   background-size: cover;
 }
 
 .main > section {
   min-height: 100vh;
   box-sizing: content-box;
-}
-
-.main > section:nth-child(odd):not(:first-of-type) {
-  background-color: navy;
 }

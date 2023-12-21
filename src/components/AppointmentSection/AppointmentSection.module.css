@@ -19,12 +19,13 @@
 }
 
 .appointmentSection > div:first-of-type > iframe {
-  border: 1px blue solid;
   width: 100%;
   height: 100%;
 }
 
 .contactDetails {
+  background-color: var(--white-transparency);
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -38,7 +39,6 @@
 }
 
 .contactDetails > iframe {
-  border: 1px blue solid;
   width: 100%;
   aspect-ratio: 4/3;
 }

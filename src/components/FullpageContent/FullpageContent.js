@@ -9,6 +9,12 @@ import MedicalCenterSection from "@/components/MedicalCenterSection/MedicalCente
 import ContactSection from "@/components/ContactSection/ContactSection";
 import SectionLayout from "@/components/SectionLayout/SectionLayout";
 
+import homeBanner from "@/img/generals/home-banner.jpeg";
+import servicesBanner from "@/img/generals/services-banner.jpg";
+import medicalCenterBanner from "@/img/generals/medical-center-banner.jpg";
+import appointmentBanner from "@/img/generals/appointment-banner.jpg";
+import contactBanner from "@/img/generals/contact-banner.jpg";
+
 // This component displays the fullpage sections and sets fullpageApiState
 
 const FullpageContent = ({
@@ -35,34 +41,43 @@ const FullpageContent = ({
         setActiveSection={setActiveSection}
         sectionName={"home"}
         fullpageApi={fullpageApi}
+        backgroundImage={homeBanner}
       >
         <HomeSection fullpageApi={fullpageApi} />
       </SectionLayout>
       <SectionLayout
+        headerHeight={headerHeight}
         setActiveSection={setActiveSection}
         sectionName="services"
         fullpageApi={fullpageApi}
+        backgroundImage={servicesBanner}
       >
         <ServicesAndRates />
       </SectionLayout>
       <SectionLayout
+        headerHeight={headerHeight}
         setActiveSection={setActiveSection}
         sectionName="practice"
         fullpageApi={fullpageApi}
+        backgroundImage={medicalCenterBanner}
       >
         <MedicalCenterSection fullpageApi={fullpageApi} />
       </SectionLayout>
       <SectionLayout
+        headerHeight={headerHeight}
         setActiveSection={setActiveSection}
         sectionName="appointment"
         fullpageApi={fullpageApi}
+        backgroundImage={appointmentBanner}
       >
         <AppointmentSection />
       </SectionLayout>
       <SectionLayout
+        headerHeight={headerHeight}
         setActiveSection={setActiveSection}
         sectionName="contact"
         fullpageApi={fullpageApi}
+        backgroundImage={contactBanner}
       >
         <ContactSection />
       </SectionLayout>
