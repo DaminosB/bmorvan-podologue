@@ -177,14 +177,14 @@ const Footer = ({ fullpageApiState }) => {
                   </td>
                   <td>
                     <a
-                      target="blank"
+                      target="_blank"
                       href="https://www.flaticon.com/fr/auteurs/bsd"
                     >
                       bsd <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                     </a>
                   </td>
                   <td>
-                    <a target="blank" href="http://www.flaticon.com/fr">
+                    <a target="_blank" href="http://www.flaticon.com/fr">
                       Flaticon{" "}
                       <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                     </a>
@@ -196,7 +196,7 @@ const Footer = ({ fullpageApiState }) => {
                   </td>
                   <td>
                     <a
-                      target="blank"
+                      target="_blank"
                       href="https://www.flaticon.com/authors/freepik"
                     >
                       Freepik{" "}
@@ -204,7 +204,7 @@ const Footer = ({ fullpageApiState }) => {
                     </a>
                   </td>
                   <td>
-                    <a target="blank" href="http://www.flaticon.com/fr">
+                    <a target="_blank" href="http://www.flaticon.com/fr">
                       Flaticon{" "}
                       <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                     </a>
@@ -216,7 +216,7 @@ const Footer = ({ fullpageApiState }) => {
                   </td>
                   <td>
                     <a
-                      target="blank"
+                      target="_blank"
                       href="https://www.flaticon.com/authors/freepik"
                     >
                       Freepik{" "}
@@ -224,7 +224,7 @@ const Footer = ({ fullpageApiState }) => {
                     </a>
                   </td>
                   <td>
-                    <a target="blank" href="http://www.flaticon.com/fr">
+                    <a target="_blank" href="http://www.flaticon.com/fr">
                       Flaticon{" "}
                       <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                     </a>
@@ -236,7 +236,7 @@ const Footer = ({ fullpageApiState }) => {
                   </td>
                   <td>
                     <a
-                      target="blank"
+                      target="_blank"
                       href="https://www.flaticon.com/authors/those-icons"
                     >
                       Those Icons{" "}
@@ -244,7 +244,7 @@ const Footer = ({ fullpageApiState }) => {
                     </a>
                   </td>
                   <td>
-                    <a target="blank" href="http://www.flaticon.com/fr">
+                    <a target="_blank" href="http://www.flaticon.com/fr">
                       Flaticon{" "}
                       <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                     </a>
@@ -256,7 +256,7 @@ const Footer = ({ fullpageApiState }) => {
                   </td>
                   <td>
                     <a
-                      target="blank"
+                      target="_blank"
                       href="https://www.flaticon.com/authors/fjstudio"
                     >
                       fjstudio{" "}
@@ -264,7 +264,7 @@ const Footer = ({ fullpageApiState }) => {
                     </a>
                   </td>
                   <td>
-                    <a target="blank" href="http://www.flaticon.com/fr">
+                    <a target="_blank" href="http://www.flaticon.com/fr">
                       Flaticon{" "}
                       <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                     </a>
@@ -276,7 +276,7 @@ const Footer = ({ fullpageApiState }) => {
                   </td>
                   <td>
                     <a
-                      target="blank"
+                      target="_blank"
                       href="https://www.flaticon.com/authors/freepik"
                     >
                       Freepik{" "}
@@ -284,7 +284,7 @@ const Footer = ({ fullpageApiState }) => {
                     </a>
                   </td>
                   <td>
-                    <a target="blank" href="http://www.flaticon.com/fr">
+                    <a target="_blank" href="http://www.flaticon.com/fr">
                       Flaticon{" "}
                       <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                     </a>
@@ -296,14 +296,14 @@ const Footer = ({ fullpageApiState }) => {
                   </td>
                   <td>
                     <a
-                      target="blank"
+                      target="_blank"
                       href="https://www.flaticon.com/fr/auteurs/bsd"
                     >
                       bsd <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                     </a>
                   </td>
                   <td>
-                    <a target="blank" href="http://www.flaticon.com/fr">
+                    <a target="_blank" href="http://www.flaticon.com/fr">
                       Flaticon{" "}
                       <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                     </a>
@@ -315,7 +315,7 @@ const Footer = ({ fullpageApiState }) => {
                   </td>
                   <td>
                     <a
-                      target="blank"
+                      target="_blank"
                       href="https://www.flaticon.com/authors/freepik"
                     >
                       Freepik{" "}
@@ -323,7 +323,7 @@ const Footer = ({ fullpageApiState }) => {
                     </a>
                   </td>
                   <td>
-                    <a target="blank" href="http://www.flaticon.com/fr">
+                    <a target="_blank" href="http://www.flaticon.com/fr">
                       Flaticon{" "}
                       <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                     </a>
@@ -335,7 +335,7 @@ const Footer = ({ fullpageApiState }) => {
                   </td>
                   <td>
                     <a
-                      target="blank"
+                      target="_blank"
                       href="https://www.flaticon.com/authors/those-icons"
                     >
                       Those Icons{" "}
@@ -343,7 +343,7 @@ const Footer = ({ fullpageApiState }) => {
                     </a>
                   </td>
                   <td>
-                    <a target="blank" href="http://www.flaticon.com/fr">
+                    <a target="_blank" href="http://www.flaticon.com/fr">
                       Flaticon{" "}
                       <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                     </a>
@@ -368,7 +368,7 @@ const Footer = ({ fullpageApiState }) => {
                   <td>
                     {" "}
                     <a
-                      target="blank"
+                      target="_blank"
                       href="https://www.rawpixel.com/image/5947937/free-public-domain-cc0-photo"
                     >
                       RawPixel{" "}
@@ -377,7 +377,7 @@ const Footer = ({ fullpageApiState }) => {
                   </td>
                   <td>
                     <a
-                      target="blank"
+                      target="_blank"
                       href="https://unsplash.com/fr/photos/personne-portant-des-baskets-bleues-et-blanches-8Tx1FOj8xJc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
                     >
                       RawPixel{" "}
@@ -392,7 +392,7 @@ const Footer = ({ fullpageApiState }) => {
                   <td>
                     {" "}
                     <a
-                      target="blank"
+                      target="_blank"
                       href="https://unsplash.com/fr/@dulceylima?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
                     >
                       Dulcey Lima{" "}
@@ -401,7 +401,7 @@ const Footer = ({ fullpageApiState }) => {
                   </td>
                   <td>
                     <a
-                      target="blank"
+                      target="_blank"
                       href="https://unsplash.com/fr/photos/personne-portant-des-baskets-bleues-et-blanches-8Tx1FOj8xJc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
                     >
                       Freepik{" "}
@@ -415,7 +415,7 @@ const Footer = ({ fullpageApiState }) => {
                   </td>
                   <td>
                     <a
-                      target="blank"
+                      target="_blank"
                       href="https://www.freepik.com/free-photo/nurse-with-patient-osteopathy-session_19957663.htm#query=foot%20care&position=49&from_view=search&track=ais&uuid=dd2b845c-1d2f-4d37-8258-00e2f9932106"
                     >
                       Freepik{" "}
@@ -424,7 +424,7 @@ const Footer = ({ fullpageApiState }) => {
                   </td>
                   <td>
                     {" "}
-                    <a target="blank" href="https://www.freepik.com/">
+                    <a target="_blank" href="https://www.freepik.com/">
                       Freepik{" "}
                       <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                     </a>
@@ -436,7 +436,7 @@ const Footer = ({ fullpageApiState }) => {
                   </td>
                   <td>
                     <a
-                      target="blank"
+                      target="_blank"
                       href="https://fr.freepik.com/photos-gratuite/vue-face-du-therapeute-osteopathe-masculin-controle-orteils-patiente_12346944.htm"
                     >
                       Freepik{" "}
@@ -445,7 +445,7 @@ const Footer = ({ fullpageApiState }) => {
                   </td>
                   <td>
                     {" "}
-                    <a target="blank" href="https://www.freepik.com/">
+                    <a target="_blank" href="https://www.freepik.com/">
                       Freepik{" "}
                       <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                     </a>
@@ -457,7 +457,7 @@ const Footer = ({ fullpageApiState }) => {
                   </td>
                   <td>
                     <a
-                      target="blank"
+                      target="_blank"
                       href="https://www.freepik.com/free-photo/osteopathist-treating-patient-his-feet_11403561.htm#query=foot%20care&position=38&from_view=search&track=ais&uuid=f1277a93-f378-4916-a8e4-98cadb699dfb#position=38&query=foot%20care"
                     >
                       Freepik{" "}
@@ -466,7 +466,7 @@ const Footer = ({ fullpageApiState }) => {
                   </td>
                   <td>
                     {" "}
-                    <a target="blank" href="https://www.freepik.com/">
+                    <a target="_blank" href="https://www.freepik.com/">
                       Freepik{" "}
                       <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                     </a>

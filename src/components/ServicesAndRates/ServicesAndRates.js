@@ -8,9 +8,12 @@ import nail from "@/img/services-icons/nail.png";
 import plantarWart from "@/img/services-icons/plantar-wart.png";
 import plasteredFoot from "@/img/services-icons/plastered-foot.png";
 import bicycleRider from "@/img/services-icons/bicycle-rider.png";
+import bikeSaddle from "@/img/services-icons/bike-saddle.png";
 import skiBoot from "@/img/services-icons/ski-boot.png";
 
 import ServiceCard from "@/components/ServiceCard/ServiceCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 const ServicesAndRates = () => {
   // This array contains the content of the services provided by the client.
@@ -77,6 +80,12 @@ const ServicesAndRates = () => {
       price: 30,
     },
     {
+      name: "Bootfitting",
+      description: "Le moulage et l’adaptation de vos chaussons de ski.",
+      img: skiBoot,
+      price: 150,
+    },
+    {
       name: "Bikefitting",
       description:
         "Une analyse posturale avec votre vélo en fonction de vos préférences naturelles et motrices.",
@@ -84,10 +93,17 @@ const ServicesAndRates = () => {
       price: 200,
     },
     {
-      name: "Bootfitting",
-      description: "Le moulage et l’adaptation de vos chaussons de ski.",
-      img: skiBoot,
-      price: 150,
+      name: "Moulage de votre selle",
+      description: "Réalisation de votre selle sur mesure.",
+      img: bikeSaddle,
+      other: (
+        <span className="small">
+          <a href="https://debya.fr/" target="_blank">
+            En partenariat avec la soci&eacute;t&eacute; Debya{" "}
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          </a>
+        </span>
+      ),
     },
   ];
 

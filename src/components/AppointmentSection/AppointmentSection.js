@@ -13,7 +13,7 @@ const AppointmentSection = () => {
       <div>
         <a
           href="https://www.doctolib.fr/pedicure-podologue/landivisiau/benjamin-morvan"
-          target="blank"
+          target="_blank"
         >
           Si la page ne s&apos;affiche pas correctement, cliquez ici&nbsp;
           <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
