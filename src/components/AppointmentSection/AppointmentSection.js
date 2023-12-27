@@ -21,7 +21,7 @@ const AppointmentSection = () => {
         <iframe
           title="Réservation Doctolib"
           loading="lazy"
-          src="https://partners.doctolib.fr/pedicure-podologue/landivisiau/benjamin-morvan"
+          // src="https://partners.doctolib.fr/pedicure-podologue/landivisiau/benjamin-morvan"
           allowFullScreen
         ></iframe>
       </div>

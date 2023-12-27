@@ -7,7 +7,8 @@ import { useState, useRef } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 
 import Header from "@/components/Header/Header";
-import FullpageContent from "../FullpageContent/FullpageContent";
+import FullpageContent from "@/components/FullpageContent/FullpageContent";
+import Footer from "@/components/Footer/Footer";
 
 // This component wraps all the page's content so it can pass the fullpageApi to components outside the ReactFullpageWrapper
 
@@ -48,7 +49,7 @@ const ContentWrapper = () => {
           );
         }}
       />
-      <footer>Made in France</footer>
+      <Footer fullpageApiState={fullpageApiState} />
     </>
   );
 };

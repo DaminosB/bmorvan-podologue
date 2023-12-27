@@ -9,6 +9,7 @@
   --main-blue: navy;
   --light-blue: lightblue;
   --white-transparency: rgba(255, 255, 255, 0.666);
+  --white-low-transparency: rgba(255, 255, 255, 0.9);
   --standard-radius: 5px;
 }
 
@@ -209,6 +210,8 @@ h3 {
 
 h4 {
   font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 a:hover {

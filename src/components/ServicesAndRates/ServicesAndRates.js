@@ -10,7 +10,7 @@ import plasteredFoot from "@/img/services-icons/plastered-foot.png";
 import bicycleRider from "@/img/services-icons/bicycle-rider.png";
 import skiBoot from "@/img/services-icons/ski-boot.png";
 
-import ServiceCard from "../ServiceCard/ServiceCard";
+import ServiceCard from "@/components/ServiceCard/ServiceCard";
 
 const ServicesAndRates = () => {
   // This array contains the content of the services provided by the client.
