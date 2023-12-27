@@ -104,7 +104,7 @@ const Footer = ({ fullpageApiState }) => {
                   <td>Benjamin Morvan</td>
                 </tr>
                 <tr>
-                  <td>Adresse d'exercice</td>
+                  <td>Adresse d&apos;exercice</td>
                   <td>15 chemin de Penhoat 29000 Quimper</td>
                 </tr>
                 <tr>
@@ -142,11 +142,11 @@ const Footer = ({ fullpageApiState }) => {
             <table>
               <tbody>
                 <tr>
-                  <td>Identité de l'hébergeur</td>
+                  <td>Identité de l&apos;hébergeur</td>
                   <td>Vercel Inc.</td>
                 </tr>
                 <tr>
-                  <td>Adresse de l'hébergeur</td>
+                  <td>Adresse de l&apos;hébergeur</td>
                   <td>340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis.</td>
                 </tr>
               </tbody>
