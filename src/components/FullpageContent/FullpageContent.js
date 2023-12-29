@@ -71,7 +71,7 @@ const FullpageContent = ({
         fullpageApi={fullpageApi}
         backgroundImage={medicalCenterBanner}
       >
-        <MedicalCenterSection fullpageApi={fullpageApi} />
+        <MedicalCenterSection fullpageApi={fullpageApi} data={data} />
       </SectionLayout>
       <SectionLayout
         headerHeight={headerHeight}

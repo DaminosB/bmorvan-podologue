@@ -9,8 +9,10 @@ import photo3 from "@/img/medical-center/3.jpeg";
 
 import Carousel from "@/components/Carousel/Carousel";
 
-const MedicalCenterSection = ({ fullpageApi }) => {
+const MedicalCenterSection = ({ fullpageApi, data }) => {
   // fullpageApi: Object. The prop given by the ReactFullpageWrapper
+
+  const { clinicName, address } = data;
 
   const fileArray = [
     { photo: photo1, caption: "crédit photo : Ouest France" },
@@ -20,7 +22,7 @@ const MedicalCenterSection = ({ fullpageApi }) => {
 
   return (
     <div className={`container ${styles.medicalCenterSection}`}>
-      <h2>La Maison m&eacute;dicale du Kerlic</h2>
+      <h2>{clinicName}</h2>
       <div>
         <Carousel fileArray={fileArray} />
         <div className={styles.infos}>
@@ -57,11 +59,7 @@ const MedicalCenterSection = ({ fullpageApi }) => {
             </ul>
           </div>
           <div>
-            <h3>
-              9&nbsp;chemin de&nbsp;Penhoat
-              <br />
-              29000&nbsp;Quimper
-            </h3>
+            <h3>{address}</h3>
 
             <button onClick={() => fullpageApi.moveTo("appointment")}>
               <FontAwesomeIcon icon={faMapLocationDot} />
