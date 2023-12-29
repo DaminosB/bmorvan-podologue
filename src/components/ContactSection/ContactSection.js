@@ -8,6 +8,7 @@ import axios from "axios";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faArrowUpRightFromSquare,
   faLocationDot,
   faSquarePhone,
 } from "@fortawesome/free-solid-svg-icons";
@@ -18,8 +19,10 @@ import {
 
 import profilePicture from "@/img/generals/profile-picture.webp";
 
-const ContactSection = () => {
-  const [name, setName] = useState({
+const ContactSection = ({ data }) => {
+  const { name, titleText, phoneNumber, clinicName, address } = data;
+
+  const [username, setUsername] = useState({
     value: "",
     isValid: true,
   });
@@ -73,7 +76,7 @@ const ContactSection = () => {
 
     setFormIsDisabled(true);
 
-    inputVerification(nonEmptyStringRegex, setName, true);
+    inputVerification(nonEmptyStringRegex, setUsername, true);
     inputVerification(emailRegex, setEmail);
     inputVerification(telephoneRegex, setTelephone);
     inputVerification(nonEmptyStringRegex, setSubject, true);
@@ -81,13 +84,13 @@ const ContactSection = () => {
 
     try {
       if (
-        name.isValid ||
+        username.isValid ||
         email.isValid ||
         telephone.isValid ||
         message.isValid
       ) {
         const { data } = await axios.post("/api/", {
-          name: name.value,
+          name: username.value,
           email: email.value,
           telephone: telephone.value,
           message: message.value,
@@ -102,7 +105,7 @@ const ContactSection = () => {
           });
         };
 
-        resetValue(setName);
+        resetValue(setUsername);
         resetValue(setEmail);
         resetValue(setTelephone);
         resetValue(setSubject);
@@ -131,7 +134,7 @@ const ContactSection = () => {
 
   useEffect(() => {
     if (
-      !name.isValid ||
+      !username.isValid ||
       !email.isValid ||
       !telephone.isValid ||
       !subject.isValid ||
@@ -141,7 +144,10 @@ const ContactSection = () => {
     } else {
       setFormIsDisabled(false);
     }
-  }, [name, email, telephone, subject, message]);
+  }, [username, email, telephone, subject, message]);
+
+  const RGPDtext =
+    "Les données de contact que vous renseignez dans ce formulaire sont utilisées sur la base de votre consentement par votre podologue Benjamin Morvan uniquement pour répondre à votre demande. Elles ne sont pas transmises à des tiers et sont conservées pendant la période de prise de contact ainsi que pendant la durée légale nécessaire. Vous disposez de droits d’accès, de rectification, d’effacement, d’opposition au ou de limitation du traitement de vos données, de retrait de votre consentement. Vous pouvez exercer ces droits auprès de votre podologue (mail ou courrier).";
 
   return (
     <div className={`container ${styles.contactContainer}`}>
@@ -149,26 +155,26 @@ const ContactSection = () => {
       <div>
         <form onSubmit={submitMessage} className={styles.contactForm}>
           <label htmlFor="name">
-            <span>Nom</span>
+            <span>Nom*</span>
             <input
-              className={!name.isValid ? styles.redInput : ""}
+              className={!username.isValid ? styles.redInput : ""}
               type="text"
               name="nom"
               id="name"
               placeholder="Votre nom"
-              value={name.value}
-              onChange={(e) => inputChange(e.target.value, setName)}
+              value={username.value}
+              onChange={(e) => inputChange(e.target.value, setUsername)}
               onBlur={() =>
-                inputVerification(nonEmptyStringRegex, setName, true)
+                inputVerification(nonEmptyStringRegex, setUsername, true)
               }
             />
             <p className="small redTxt">
-              {!name.isValid && "Ce champ est obligatoire."}
+              {!username.isValid && "Ce champ est obligatoire."}
             </p>
           </label>
 
           <label htmlFor="email">
-            <span>Email</span>
+            <span>Email*</span>
             <input
               className={!email.isValid ? styles.redInput : ""}
               type="email"
@@ -186,7 +192,7 @@ const ContactSection = () => {
           </label>
 
           <label htmlFor="telephone">
-            <span>Téléphone</span>
+            <span>Téléphone*</span>
             <input
               className={!telephone.isValid ? styles.redInput : ""}
               type="tel"
@@ -204,7 +210,7 @@ const ContactSection = () => {
           </label>
 
           <label htmlFor="subject">
-            <span>Objet</span>
+            <span>Objet*</span>
             <input
               className={!subject.isValid ? styles.redInput : ""}
               type="text"
@@ -223,7 +229,7 @@ const ContactSection = () => {
           </label>
 
           <label htmlFor="message">
-            <span>Message</span>
+            <span>Message*</span>
             <textarea
               className={!message.isValid ? styles.redInput : ""}
               name="message"
@@ -260,6 +266,18 @@ const ContactSection = () => {
           >
             Valider
           </button>
+          <p className="small">
+            (*) Tous les champs sont obligatoires.
+            <br />
+            {RGPDtext}
+            <br />
+            Pour en savoir plus sur la protection de vos donn&eacute;es
+            personnelles,{" "}
+            <a href="https://www.cnil.fr/fr" target="_blank">
+              consultez le site internet de la CNIL.{" "}
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+            </a>
+          </p>
         </form>
 
         <div className={styles.contactInfos}>
@@ -268,22 +286,20 @@ const ContactSection = () => {
             alt="Photo de Benjamin Morvan issue de sa page Doctolib"
           />
           <div>
-            <h3>Benjamin Morvan</h3>
-            <p>
-              P&eacute;dicure-podologue dipl&ocirc;m&eacute; d&apos;&Eacute;tat
-              &agrave; Quimper
-            </p>
+            <h3>{name}</h3>
+            <p>{titleText}</p>
           </div>
           <div>
             <FontAwesomeIcon icon={faLocationDot} />
-            <h4>
-              Maison&nbsp;m&eacute;dicale de&nbsp;Kerlic
-              9&nbsp;chemin&nbsp;de&nbsp;Penhoat 29000&nbsp;Quimper
-            </h4>
+            <p>
+              {clinicName}
+              <br />
+              {address}
+            </p>
           </div>
           <div>
             <FontAwesomeIcon icon={faSquarePhone} />
-            <h4>02.57.23.06.34</h4>
+            <p>{phoneNumber}</p>
           </div>
         </div>
       </div>

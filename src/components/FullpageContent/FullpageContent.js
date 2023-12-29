@@ -89,7 +89,7 @@ const FullpageContent = ({
         fullpageApi={fullpageApi}
         backgroundImage={contactBanner}
       >
-        <ContactSection />
+        <ContactSection data={data} />
       </SectionLayout>
     </main>
   );
