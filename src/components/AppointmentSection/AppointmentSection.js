@@ -7,7 +7,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const AppointmentSection = () => {
+const AppointmentSection = ({ data }) => {
+  const { name, phoneNumber, clinicName, address } = data;
+
   return (
     <div className={`container ${styles.appointmentSection}`}>
       <div>
@@ -27,20 +29,21 @@ const AppointmentSection = () => {
       </div>
       <div className={styles.contactDetails}>
         <div>
-          <h3>Benjamin&nbsp;Morvan</h3>
+          <h3>{name}</h3>
           <span>Podologie - pédicurie</span>
-          <span>Spécialiste du sport</span>
+          <span>DU Podologie, Biom&eacute;canique et Sport</span>
         </div>
         <div>
           <div>
             <FontAwesomeIcon icon={faSquarePhone} />
-            <span>02.57.23.06.34</span>
+            <span>{phoneNumber}</span>
           </div>
           <div>
             <FontAwesomeIcon icon={faLocationDot} />
             <span>
-              Maison&nbsp;m&eacute;dicale de&nbsp;Kerlic
-              9&nbsp;chemin&nbsp;de&nbsp;Penhoat 29000&nbsp;Quimper
+              {clinicName}
+              <br />
+              {address}
             </span>
           </div>
         </div>

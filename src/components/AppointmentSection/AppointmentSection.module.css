@@ -38,6 +38,11 @@
   font-size: 18px;
 }
 
+.contactDetails > div > div {
+  display: flex;
+  align-items: center;
+}
+
 .contactDetails > iframe {
   width: 100%;
   aspect-ratio: 4/3;

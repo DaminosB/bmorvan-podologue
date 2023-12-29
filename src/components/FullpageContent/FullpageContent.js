@@ -80,7 +80,7 @@ const FullpageContent = ({
         fullpageApi={fullpageApi}
         backgroundImage={appointmentBanner}
       >
-        <AppointmentSection />
+        <AppointmentSection data={data} />
       </SectionLayout>
       <SectionLayout
         headerHeight={headerHeight}
