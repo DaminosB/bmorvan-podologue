@@ -7,6 +7,14 @@
   padding: 30px 0;
 }
 
+.homeSection div {
+  border-radius: var(--standard-radius);
+}
+
+.homeSection p {
+  text-align: justify;
+}
+
 .titleDiv {
   background-color: var(--white-transparency);
   padding: 30px;
@@ -29,6 +37,11 @@
   text-align: left;
   align-items: center;
   gap: 10px;
+}
+
+.optionsDiv > div {
+  background-color: var(--white-transparency);
+  padding: 5px;
 }
 
 .optionsDiv > button.blueBtn {
@@ -81,5 +94,6 @@
 
   .optionsDiv > * {
     text-align: left;
+    width: fit-content;
   }
 }

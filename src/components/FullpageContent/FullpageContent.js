@@ -34,6 +34,16 @@ const FullpageContent = ({
     fullpageApi && setFullpageApiState(fullpageApi);
   }, [fullpageApi, setFullpageApiState]);
 
+  const data = {
+    name: "Benjamin Morvan",
+    titleText: "Pédicure-podologue diplômé\u00a0d'État à Quimper",
+    presentationText:
+      "Passionné des sports d’ultra-endurance ainsi que des activités outdoor (trailrunning, randonnée, cyclisme sur route, vtt, wakeboard, wing foil, ski…), cette pratique m’a amené à effectuer des formations spécialisées pour adapter le métier de podologue aux exigences et spécificités de la pratique sportive de tous niveaux. Par ailleurs, adhérent de l’association Podoxygène, je travaille régulièrement pour des trails nationaux ou internationaux (équipes médicales UTMB, HMDS, TREK’In’Gazelles…). Je serais ravi de pour pouvoir vous soigner (soins de pédicurie, bilan podologique) mais aussi de vous apporter mon expertise dans le cadre de la pratique de vos activités physiques et sportives. Je peux également adapter votre matériel sportif en fonction de vos spécificités physiques (bikefiting, bootfiting).",
+    phoneNumber: "02.57.23.06.34",
+    clinicName: "Maison Médicale Bretagne Occidentale - Kerlic",
+    address: "15\u00a0chemin de\u00a0Penhoat 29000\u00a0Quimper",
+  };
+
   return (
     <main className={styles.main}>
       <SectionLayout
@@ -43,7 +53,7 @@ const FullpageContent = ({
         fullpageApi={fullpageApi}
         backgroundImage={homeBanner}
       >
-        <HomeSection fullpageApi={fullpageApi} />
+        <HomeSection fullpageApi={fullpageApi} data={data} />
       </SectionLayout>
       <SectionLayout
         headerHeight={headerHeight}
