@@ -84,19 +84,19 @@
   cursor: not-allowed;
 }
 
-.contactForm p:not(:last-of-type) {
+.contactForm p.formMessage {
   margin-top: 0;
   height: 18px;
-}
-
-.contactForm p:last-of-type {
-  text-align: justify;
 }
 
 .contactForm > div:last-of-type {
   display: flex;
   gap: 15px;
   align-items: center;
+}
+
+.contactForm p:not(.formMessage) {
+  text-align: justify;
 }
 
 .contactInfos {

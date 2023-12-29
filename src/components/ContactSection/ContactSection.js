@@ -168,7 +168,7 @@ const ContactSection = ({ data }) => {
                 inputVerification(nonEmptyStringRegex, setUsername, true)
               }
             />
-            <p className="small redTxt">
+            <p className={`${styles.formMessage} small redTxt`}>
               {!username.isValid && "Ce champ est obligatoire."}
             </p>
           </label>
@@ -185,7 +185,7 @@ const ContactSection = ({ data }) => {
               onChange={(e) => inputChange(e.target.value, setEmail)}
               onBlur={() => inputVerification(emailRegex, setEmail)}
             />
-            <p className="small redTxt">
+            <p className={`${styles.formMessage} small redTxt`}>
               {!email.isValid &&
                 "Votre email doit être renseigné sous le format abc@domaine.com."}
             </p>
@@ -204,7 +204,7 @@ const ContactSection = ({ data }) => {
               onChange={(e) => inputChange(e.target.value, setTelephone)}
               onBlur={() => inputVerification(telephoneRegex, setTelephone)}
             />
-            <p className="small redTxt">
+            <p className={`${styles.formMessage} small redTxt`}>
               {!telephone.isValid && "Votre numéro doit comporter 10 chiffres."}
             </p>
           </label>
@@ -223,7 +223,7 @@ const ContactSection = ({ data }) => {
                 inputVerification(nonEmptyStringRegex, setSubject, true)
               }
             />
-            <p className="small redTxt">
+            <p className={`${styles.formMessage} small redTxt`}>
               {!subject.isValid && "Ce champ est obligatoire."}
             </p>
           </label>
@@ -241,7 +241,7 @@ const ContactSection = ({ data }) => {
                 inputVerification(nonEmptyStringRegex, setMessage, true)
               }
             ></textarea>
-            <p className="small redTxt">
+            <p className={`${styles.formMessage} small redTxt`}>
               {!message.isValid && "Ce champ est obligatoire."}
             </p>
           </label>
