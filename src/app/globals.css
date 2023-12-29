@@ -185,6 +185,10 @@ textarea {
   font-size: 14px;
 }
 
+.text-left {
+  text-align: left;
+}
+
 body {
   background-color: white;
   color: var(--main-blue);

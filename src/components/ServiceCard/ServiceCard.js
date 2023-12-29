@@ -10,14 +10,15 @@ const ServiceCard = ({ service }) => {
   return (
     <div className={styles.serviceCard}>
       <div className={styles.imgBorder}>
-        <Image src={service.img} width={125} height={125} alt="blabla" />
+        <Image
+          src={service.img}
+          width={125}
+          height={125}
+          alt={`Icône ${service.name}`}
+        />
       </div>
-      <div className={styles.priceAndName}>
-        <h2>{service.name}</h2>
-        {service.price && (
-          <span className="greenTxt strong">{service.price} €</span>
-        )}
-      </div>
+      <h2>{service.name}</h2>
+      {service.price && <p className={styles.priceTag}>{service.price} €</p>}
       <p>{service.description}</p>
       <div className={styles.options}>{service.other}</div>
     </div>

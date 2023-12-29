@@ -5,6 +5,17 @@
   text-align: center;
 }
 
+.serviceCard h2 {
+  margin-bottom: 0px;
+}
+
+.priceTag {
+  padding: 5px;
+  background-color: var(--main-blue);
+  border-radius: var(--standard-radius);
+  color: white;
+}
+
 .options {
   display: flex;
   flex-direction: column;
@@ -20,14 +31,4 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
-}
-
-.priceAndName {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.priceAndName > span {
-  text-wrap: nowrap;
 }
