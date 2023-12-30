@@ -32,7 +32,6 @@ const Footer = ({ fullpageApiState }) => {
 
   const footerRef = useRef(null);
   const buttonRef = useRef(null);
-  const contentDivRef = useRef(null);
 
   const activeSectionWhenFooterIsShown = useRef(null);
 
@@ -95,7 +94,7 @@ const Footer = ({ fullpageApiState }) => {
         </div>
         <div>
           <h2>Mentions Légales</h2>
-          <div ref={contentDivRef}>
+          <div>
             <h3 id="id">Identit&eacute;</h3>
             <table>
               <tbody>
@@ -105,7 +104,7 @@ const Footer = ({ fullpageApiState }) => {
                 </tr>
                 <tr>
                   <td>Adresse d&apos;exercice</td>
-                  <td>15 chemin de Penhoat 29000 Quimper</td>
+                  <td>9 chemin de Penhoat 29000 Quimper</td>
                 </tr>
                 <tr>
                   <td>Inscription au RCS</td>

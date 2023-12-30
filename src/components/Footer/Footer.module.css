@@ -4,7 +4,7 @@
   bottom: 0px;
   top: 100%;
   width: 100%;
-  background-color: white;
+  background-color: var(--light-blue);
   transition: 500ms ease-in-out;
   z-index: 1;
   scroll-behavior: smooth;
@@ -62,6 +62,10 @@
   transition: 500ms ease-in-out;
 }
 
+.footer > button > svg {
+  height: 18px;
+}
+
 .topBtn {
   border-bottom-left-radius: var(--standard-radius);
   border-bottom-right-radius: var(--standard-radius);
@@ -75,6 +79,11 @@
 .footer > div {
   margin-top: 100px;
   display: flex;
+}
+
+.footer > div > div:last-of-type {
+  padding: 30px;
+  background-color: white;
 }
 
 .navContainer {

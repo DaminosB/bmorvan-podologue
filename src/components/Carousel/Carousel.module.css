@@ -16,7 +16,6 @@
 
 .activePhoto {
   position: relative;
-  background-color: navy;
   transition: 200ms ease-in-out;
 }
 

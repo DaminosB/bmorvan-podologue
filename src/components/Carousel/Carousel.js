@@ -38,11 +38,13 @@ const Carousel = ({ fileArray }) => {
         <Image
           src={fileArray[activeIndex].photo}
           ref={activePhotoRef}
-          alt={"Photo de la Maison Médical du Kerlic, crédit Ouest France"}
+          alt={fileArray[activeIndex].alt}
         />
-        <span className={styles.imageCaption}>
-          {fileArray[activeIndex].caption}
-        </span>
+        {fileArray[activeIndex].caption && (
+          <span className={styles.imageCaption}>
+            {fileArray[activeIndex].caption}
+          </span>
+        )}
       </div>
       <div className={styles.photoThumbnails}>
         {fileArray.map((photo, i) => {
@@ -50,7 +52,7 @@ const Carousel = ({ fileArray }) => {
             <Image
               key={i}
               src={photo.photo}
-              alt={"Photo de la Maison Médical du Kerlic, crédit Ouest France"}
+              alt={photo.alt}
               className={activeIndex === i ? styles.opaqueImg : ""}
               onClick={() => changeActiveImage(i)}
             />

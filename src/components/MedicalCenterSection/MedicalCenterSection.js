@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 import photo1 from "@/img/medical-center/1.jpeg";
-import photo2 from "@/img/medical-center/2.jpeg";
-import photo3 from "@/img/medical-center/3.jpeg";
+import photo2 from "@/img/medical-center/2.jpg";
+import photo3 from "@/img/medical-center/3.jpg";
 
 import Carousel from "@/components/Carousel/Carousel";
 
@@ -15,9 +15,19 @@ const MedicalCenterSection = ({ fullpageApi, data }) => {
   const { clinicName, address } = data;
 
   const fileArray = [
-    { photo: photo1, caption: "crédit photo : Ouest France" },
-    { photo: photo2, caption: "crédit photo : Ouest France" },
-    { photo: photo3, caption: "crédit photo : Ouest France" },
+    {
+      photo: photo1,
+      caption: "crédit photo : Ouest France",
+      alt: "Photo de la Maison Médical du Kerlic, crédit Ouest France",
+    },
+    {
+      photo: photo2,
+      alt: "Photo des équipements du cabinet, avec un fauteuil de consultation et un tapis",
+    },
+    {
+      photo: photo3,
+      alt: "Photo du bureau dans le cabinet et du fauteuil de consultation",
+    },
   ];
 
   return (
