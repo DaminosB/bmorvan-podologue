@@ -12,6 +12,11 @@ const Home = ({ fullpageApi, data }) => {
 
   const { name, titleText, phoneNumber, clinicName, address } = data;
 
+  const phoneNumberToDisplay = phoneNumber
+    .split("")
+    .map((char, i) => (i % 2 === 0 && i !== 0 ? " " + char : char))
+    .join("");
+
   return (
     <div className={`container ${styles.homeSection}`}>
       <div className={styles.titleDiv}>
@@ -44,7 +49,9 @@ const Home = ({ fullpageApi, data }) => {
       <div className={styles.optionsDiv}>
         <div>
           <FontAwesomeIcon icon={faSquarePhone} />
-          <span>{phoneNumber}</span>
+          <span>
+            <a href={`tel:${phoneNumber}`}>{phoneNumberToDisplay}</a>
+          </span>
         </div>
         <button
           className={styles.blueBtn}

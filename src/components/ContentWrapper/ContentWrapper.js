@@ -35,6 +35,7 @@ const ContentWrapper = () => {
         licenseKey={"gplv3-license"}
         scrollingSpeed={1000}
         credits={false}
+        lazyLoading={false}
         anchors={["home", "services", "practice", "appointment", "contact"]}
         render={({ state, fullpageApi }) => {
           return (

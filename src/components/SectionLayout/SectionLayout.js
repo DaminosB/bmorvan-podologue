@@ -35,9 +35,9 @@ const SectionLayout = ({
       ref={ref}
       style={{ backgroundImage: `url(${backgroundImage.src}` }}
     >
-      <Spacer height={headerHeight} />
+      <Spacer height={headerHeight * 1.5} />
       {children}
-      <Spacer height={headerHeight / 2} />
+      <Spacer height={headerHeight} />
     </section>
   );
 };

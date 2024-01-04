@@ -10,6 +10,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const AppointmentSection = ({ data }) => {
   const { name, phoneNumber, clinicName, address } = data;
 
+  const phoneNumberToDisplay = phoneNumber
+    .split("")
+    .map((char, i) => (i % 2 === 0 && i !== 0 ? " " + char : char))
+    .join("");
+
   return (
     <div className={`container ${styles.appointmentSection}`}>
       <div>
@@ -36,7 +41,9 @@ const AppointmentSection = ({ data }) => {
         <div>
           <div>
             <FontAwesomeIcon icon={faSquarePhone} />
-            <span>{phoneNumber}</span>
+            <span>
+              <a href={`tel:${phoneNumber}`}>{phoneNumberToDisplay}</a>
+            </span>
           </div>
           <div>
             <FontAwesomeIcon icon={faLocationDot} />

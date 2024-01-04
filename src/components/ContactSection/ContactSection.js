@@ -149,6 +149,11 @@ const ContactSection = ({ data }) => {
   const RGPDtext =
     "Les données de contact que vous renseignez dans ce formulaire sont utilisées sur la base de votre consentement par votre podologue Benjamin Morvan uniquement pour répondre à votre demande. Elles ne sont pas transmises à des tiers et sont conservées pendant la période de prise de contact ainsi que pendant la durée légale nécessaire. Vous disposez de droits d’accès, de rectification, d’effacement, d’opposition au ou de limitation du traitement de vos données, de retrait de votre consentement. Vous pouvez exercer ces droits auprès de votre podologue (mail ou courrier).";
 
+  const phoneNumberToDisplay = phoneNumber
+    .split("")
+    .map((char, i) => (i % 2 === 0 && i !== 0 ? " " + char : char))
+    .join("");
+
   return (
     <div className={`container ${styles.contactContainer}`}>
       <h2>Contact</h2>
@@ -299,7 +304,10 @@ const ContactSection = ({ data }) => {
           </div>
           <div>
             <FontAwesomeIcon icon={faSquarePhone} />
-            <p>{phoneNumber}</p>
+            <p>
+              {" "}
+              <a href={`tel:${phoneNumber}`}>{phoneNumberToDisplay}</a>
+            </p>
           </div>
         </div>
       </div>

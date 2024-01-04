@@ -240,6 +240,17 @@ button {
   display: none;
 }
 
+.fp-overflow {
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.fp-overflow::-webkit-scrollbar {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   h1 {
     font-size: 25px;

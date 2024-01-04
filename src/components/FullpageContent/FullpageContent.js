@@ -37,7 +37,7 @@ const FullpageContent = ({
   const data = {
     name: "Benjamin Morvan",
     titleText: "Pédicure-podologue diplômé\u00a0d'État à Quimper",
-    phoneNumber: "02.57.23.06.34",
+    phoneNumber: "0695546090",
     clinicName: "Maison Médicale Bretagne Occidentale - Kerlic",
     address: "9\u00a0chemin de\u00a0Penhoat 29000\u00a0Quimper",
   };
