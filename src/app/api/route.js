@@ -23,7 +23,7 @@ export const POST = async (request) => {
     const messageData = {
       from: `${name} ${email}`,
       to: "morvan.podologue@gmail.com",
-      subject: `Online - ${subject}`,
+      subject: `Patient - ${subject}`,
       text: `${message}\n${name}\n${telephone}\n${email}`,
     };
 
