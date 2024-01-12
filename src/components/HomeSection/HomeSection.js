@@ -26,7 +26,7 @@ const Home = ({ fullpageApi, data }) => {
           Passionn&eacute; des sports d&apos;ultra-endurance ainsi que des
           activit&eacute;s outdoor (trailrunning, randonn&eacute;e, cyclisme sur
           route, vtt, wakeboard, wing foil, ski…), cette pratique m&apos;a
-          amen&eacute; &egrave; effectuer des formations
+          amen&eacute; &agrave; effectuer des formations
           sp&eacute;cialis&eacute;es pour adapter le m&eacute;tier de podologue
           aux exigences et sp&eacute;cificit&eacute;s de la pratique sportive de
           tous niveaux.
@@ -38,12 +38,12 @@ const Home = ({ fullpageApi, data }) => {
           TREK&apos;In&apos;Gazelles…).
         </p>
         <p>
-          Je serais ravi de pour pouvoir vous soigner (soins de
-          p&eacute;dicurie, bilan podologique) mais aussi de vous apporter mon
-          expertise dans le cadre de la pratique de vos activit&eacute;s
-          physiques et sportives. Je peux &eacute;galement adapter votre
-          mat&eacute;riel sportif en fonction de vos sp&eacute;cificit&eacute;s
-          physiques (bikefiting, bootfiting).
+          Je serai ravi de pouvoir vous soigner (soins de p&eacute;dicurie,
+          bilan podologique) mais aussi de vous apporter mon expertise dans le
+          cadre de la pratique de vos activit&eacute;s physiques et sportives.
+          Je peux &eacute;galement adapter votre mat&eacute;riel sportif en
+          fonction de vos sp&eacute;cificit&eacute;s physiques (bikefiting,
+          bootfiting).
         </p>
       </div>
       <div className={styles.optionsDiv}>
