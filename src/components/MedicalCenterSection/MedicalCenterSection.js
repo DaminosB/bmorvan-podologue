@@ -17,7 +17,6 @@ const MedicalCenterSection = ({ fullpageApi, data }) => {
   const fileArray = [
     {
       photo: photo1,
-      caption: "crédit photo : Ouest France",
       alt: "Photo de la Maison Médical du Kerlic, crédit Ouest France",
     },
     {
