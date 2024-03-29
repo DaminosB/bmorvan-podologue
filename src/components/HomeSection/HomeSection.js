@@ -20,8 +20,8 @@ const Home = ({ fullpageApi, data }) => {
   return (
     <div className={`container ${styles.homeSection}`}>
       <div className={styles.titleDiv}>
-        <h1>{name}</h1>
-        <h3>{titleText}</h3>
+        <h3>{name}</h3>
+        <h1>{titleText}</h1>
         <p>
           Passionn&eacute; des sports d&apos;ultra-endurance ainsi que des
           activit&eacute;s outdoor (trailrunning, randonn&eacute;e, cyclisme sur
