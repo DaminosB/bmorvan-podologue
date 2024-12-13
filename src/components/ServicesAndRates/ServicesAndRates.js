@@ -31,7 +31,7 @@ const ServicesAndRates = () => {
       description:
         "Vos semelles orthopédiques sur mesure en fonction du bilan initial.",
       img: insoles,
-      price: "À partir de 100",
+      price: "À partir de 70",
       other: (
         <>
           <span className="small">
@@ -97,14 +97,14 @@ const ServicesAndRates = () => {
       name: "Moulage de votre selle",
       description: "Réalisation de votre selle sur mesure.",
       img: bikeSaddle,
-      other: (
-        <span className="small">
-          <a href="https://debya.fr/" target="_blank">
-            En partenariat avec la soci&eacute;t&eacute; Debya{" "}
-            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-          </a>
-        </span>
-      ),
+      // other: (
+      //   <span className="small">
+      //     <a href="https://debya.fr/" target="_blank">
+      //       En partenariat avec la soci&eacute;t&eacute; Debya{" "}
+      //       <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+      //     </a>
+      //   </span>
+      // ),
     },
   ];
 
