@@ -21,7 +21,7 @@ export const POST = async (request) => {
     });
 
     const messageData = {
-      from: `${name} ${email}`,
+      from: "postmaster@mail.benjamin-morvan.fr",
       to: "morvan.podologue@gmail.com",
       subject: `Patient - ${subject}`,
       text: `${message}\n${name}\n${telephone}\n${email}`,
