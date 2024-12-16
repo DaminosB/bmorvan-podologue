@@ -50,8 +50,8 @@ const ServicesAndRates = () => {
       ),
     },
     {
-      name: "Bilan et Pose de K-taping",
-      description: "Un bilan et une pose de K-taping.",
+      name: "Bilan et Pose de taping neuro-musculaire",
+      description: "Un bilan et une pose de taping neuro-musculaire.",
       img: footBandage,
       price: "45",
     },
